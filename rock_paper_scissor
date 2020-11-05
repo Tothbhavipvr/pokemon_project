@@ -1,0 +1,50 @@
+import random
+from time import sleep
+
+choice =["rock","paper","scissor"]
+computer =random.choice(choice)
+
+player = False
+
+while player == False:
+    print("welcome to rock,paper scissor ")
+    print("\nplease,wait the game is loading...")
+    sleep(2)
+    player =input("which one do you want to choose?\n'Rock':'Rock'\n'paper':'paper'\n'scissior':'scissior'\n'stop the game':'stop':")
+    if player == computer:
+        print("\n please wait we are loading your result.....")
+        sleep(5)
+        print("it's a Tie")
+    elif player == "rock":
+        if computer =="paper":
+            print("\n please wait we are loading your result.....")
+            sleep(5)
+            print("you have lost!!")
+        else:
+            print("you have won!!!@@")
+    elif player=="scissior":
+        if computer=="rock":
+            print("\n please wait we are loading your result.....")
+            sleep(5)
+            print("You have Lost!!")
+        else:
+            print("\n please wait we are loading your result.....")
+            sleep(5)
+            print("We have Won!!")
+    elif player=="paper":
+        if computer=="scissor":
+            print("\n please wait we are loading your result.....")
+            sleep(5)
+            print("We have lost!!")
+        else:
+            print("\n please wait we are loading your result.....")
+            sleep(5)
+            print("We have won!!")
+    elif player=="stop":
+        print("Thanks for playing")
+        break
+    else:
+        print("That's not a valid play!!")
+        break
+    player =False
+
